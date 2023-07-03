@@ -1,22 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Greeting from './Greeting';
+
+const students = [ "andrew", "ariana", "cihan", "Danny", "jen", "john", "kevin", "kevin", "lorenzo", "Max", "pat", "sam", "yaslin" ]
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+     <h1> props demo</h1>
+      {students.map(student => <Greeting key={student} name={student} /> )}
+
+
+
       </header>
     </div>
   );
